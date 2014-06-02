@@ -1,0 +1,9 @@
+---
+- name: ensure the latest version of fastcgi is installed
+  apt: pkg={{ item }}
+  with_items:
+    - spawn-fcgi
+    - fcgiwrap
+  tags:
+    - fastcgi
+    - packages
